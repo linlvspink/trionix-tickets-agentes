@@ -29,7 +29,7 @@ app.use("/api", (req, res) => {
 app.use(manejarErrores);
 
 // En Render/Railway el puerto lo da la plataforma en la variable PORT.
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 10000;
 
 async function iniciar() {
   // 1. Primero se conecta a MongoDB
