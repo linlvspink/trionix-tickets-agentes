@@ -1,6 +1,6 @@
 # Trionix Tickets: Sistema de Soporte con Agentes
 
-**Estudiante:** [Tu nombre completo]
+**Estudiante:** Carolina Santiago
 **Asignatura:** Desarrollo Web Backend · Node.js — Parcial Segundo Corte
 
 Aplicación web para gestionar los tickets de soporte de Trionix Labs y los agentes que los atienden.
@@ -10,7 +10,7 @@ plano que consume la API sin recargar la página.
 
 ## URL pública
 
-[Pega aquí la URL de la aplicación desplegada, por ejemplo https://trionix-tickets-agentes.onrender.com]
+https://trionix-tickets-agentes-zfg0.onrender.com/
 
 ## Correr el proyecto localmente
 
