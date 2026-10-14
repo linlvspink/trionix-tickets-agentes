@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trionix Labs · Soporte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="encabezado">
+    <h1>Trionix Labs · Soporte</h1>
+    <p>Tickets de clientes y agentes que los atienden</p>
+  </header>
+
+  <!-- Aviso global: aquí se muestran los errores (400, 404, 409...) y las confirmaciones -->
+  <div id="aviso" class="aviso" role="alert" hidden></div>
+
+  <main class="contenedor">
+
+    <!-- ============ NUEVO TICKET ============ -->
+    <section class="tarjeta">
+      <h2>Nuevo ticket</h2>
+      <form id="form-ticket" novalidate>
+        <div class="campo">
+          <label for="cliente">Cliente</label>
+          <input type="text" id="cliente" placeholder="Nombre del cliente" />
+        </div>
+        <div class="campo">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" placeholder="Describe brevemente el problema" />
+        </div>
+        <div class="campo">
+          <label for="prioridad">Prioridad</label>
+          <select id="prioridad">
+            <option value="baja">Baja</option>
+            <option value="media">Media</option>
+            <option value="alta">Alta</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-principal">Crear ticket</button>
+        <p id="error-ticket" class="mensaje-error"></p>
+      </form>
+    </section>
+
+    <!-- ============ LISTA DE TICKETS ============ -->
+    <section class="tarjeta">
+      <h2>Tickets</h2>
+      <div class="filtros">
+        <button class="btn-filtro activo" data-filtro="todos">Todos</button>
+        <button class="btn-filtro" data-filtro="abierto">Abiertos</button>
+        <button class="btn-filtro" data-filtro="resuelto">Resueltos</button>
+        <button class="btn-filtro" data-filtro="alta">Prioridad alta</button>
+        <button class="btn-filtro" data-filtro="media">Prioridad media</button>
+        <button class="btn-filtro" data-filtro="baja">Prioridad baja</button>
+      </div>
+      <div id="lista-tickets" class="lista-tickets"></div>
+    </section>
+
+    <!-- ============ AGENTES ============ -->
+    <section class="tarjeta">
+      <h2>Agentes de soporte</h2>
+      <form id="form-agente" novalidate>
+        <div class="fila-campos">
+          <div class="campo">
+            <label for="agente-nombre">Nombre</label>
+            <input type="text" id="agente-nombre" placeholder="Nombre completo" />
+          </div>
+          <div class="campo">
+            <label for="agente-email">Correo</label>
+            <input type="email" id="agente-email" placeholder="agente@trionix.com" />
+          </div>
+          <div class="campo">
+            <label for="agente-especialidad">Especialidad</label>
+            <select id="agente-especialidad">
+              <option value="general">General</option>
+              <option value="redes">Redes</option>
+              <option value="software">Software</option>
+              <option value="hardware">Hardware</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn-principal">Crear agente</button>
+        <p id="error-agente" class="mensaje-error"></p>
+      </form>
+
+      <div id="lista-agentes" class="lista-agentes"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
